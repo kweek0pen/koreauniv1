@@ -8,7 +8,7 @@ def Teams(N, M, K):
         mTeams = fTeams
         notTeams = M - mTeams
         if(K > notTeams):
-            while(K <= notTeams):
+            while(K > notTeams):
                 notTeams += 3
                 fTeams -= 1
             print(fTeams)
@@ -19,7 +19,7 @@ def Teams(N, M, K):
         mTeams = M
         notTeams = N - 2 *fTeams
         if (K > notTeams):
-            while(K <= notTeams):
+            while(K > notTeams):
                 notTeams += 3
                 mTeams -= 1
             print(mTeams)
