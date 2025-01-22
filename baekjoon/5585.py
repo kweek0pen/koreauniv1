@@ -1,18 +1,10 @@
-import sys
-input = sys.stdin.readline
-
-def change(amount, coin):
-	global count
-	if (amount // coin > 0):
-	    count += (amount // coin)
-	    return amount % coin
-	return amount
-	
-paidAmount = int(input().strip())
-amount = 1000 - paidAmount
+paid = int(input())
+amount = 1000 - paid
 count = 0
-coins = [500, 100, 10, 5, 1]
+coins = [500, 100, 50, 10, 5, 1]
+
 for coin in coins:
-	change(amount, coin)
-	
+    count += (amount // coin)
+    amount %= coin
+    
 print(count)
